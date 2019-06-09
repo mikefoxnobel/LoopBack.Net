@@ -100,6 +100,11 @@ namespace LoopBack.QueryBuilder.Filters
 
         public Filter Where(WhereOperatorBase whereOperator)
         {
+            return this.And(whereOperator);
+        }
+
+        public Filter And(WhereOperatorBase whereOperator)
+        {
             if (this.WhereFilter == null)
             {
                 this.WhereFilter = whereOperator;
@@ -110,5 +115,19 @@ namespace LoopBack.QueryBuilder.Filters
             }
             return this;
         }
+
+        public Filter Or(WhereOperatorBase whereOperator)
+        {
+            if (this.WhereFilter == null)
+            {
+                this.WhereFilter = whereOperator;
+            }
+            else
+            {
+                this.WhereFilter = this.WhereFilter.Or(whereOperator);
+            }
+            return this;
+        }
+
     }
 }
