@@ -19,8 +19,8 @@ namespace LoopBack.QueryBuilder.Extensions
 
         static JsonSerializationExtension()
         {
-            converters.Add(new StringJrawConverter());
             converters.Add(new StringEnumConverter());
+            converters.Add(new PropertiesDefinitionConverter());
             serializerSettings = new JsonSerializerSettings()
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
@@ -49,6 +49,12 @@ namespace LoopBack.QueryBuilder.Extensions
         public static string Serialize(this object source)
         {
             string result = JsonConvert.SerializeObject(source, Formatting.None, serializerSettings);
+            return result;
+        }
+
+        public static T Deserialize<T>(this string json)
+        {
+            T result = JsonConvert.DeserializeObject<T>(json, serializerSettings);
             return result;
         }
     }

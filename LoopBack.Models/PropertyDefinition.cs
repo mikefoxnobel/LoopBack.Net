@@ -25,7 +25,18 @@ namespace LoopBack.Models
         public string Doc
         {
             get => this.Description;
-            set => this.Description = value;
+            set
+            {
+                if (string.IsNullOrEmpty(this.Description))
+                {
+                    this.Description = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Property's 'description' exists. Please use 'description' instead of deprecated 'doc'.", nameof(this.Doc));
+                }
+
+            }
         }
 
         private int _id = 0;
@@ -51,11 +62,11 @@ namespace LoopBack.Models
             }
             set
             {
-                if (value.Equals("false"))
+                if (value.ToLower().Equals("false"))
                 {
                     this._id = 0;
                 }
-                else if (value.Equals("true"))
+                else if (value.ToLower().Equals("true"))
                 {
                     this._id = 1;
                 }

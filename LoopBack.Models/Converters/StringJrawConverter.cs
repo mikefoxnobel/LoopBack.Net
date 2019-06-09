@@ -16,7 +16,7 @@ namespace LoopBack.Models.Converters
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            return JObject.Load(reader).ToString();
+            return reader.Value.ToString();
         }
 
         public override bool CanConvert(Type objectType)

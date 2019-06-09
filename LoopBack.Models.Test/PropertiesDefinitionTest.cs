@@ -16,7 +16,7 @@ namespace LoopBack.Models.Test
             PropertiesDefinition properties = new PropertiesDefinition();
             properties.Add("property1", new PropertyDefinition(LoopBackType.Number));
 
-            string result = properties.Serialize();
+            string json = properties.Serialize();
 
         }
 
@@ -27,7 +27,21 @@ namespace LoopBack.Models.Test
             properties.Add("property1", new PropertyDefinition(LoopBackType.Number));
             properties.Add("property2", new PropertyDefinition(LoopBackType.String));
 
-            string result = properties.Serialize();
+            string json = properties.Serialize();
+        }
+
+        [TestMethod]
+        public void DeserializeProperties_One_TypeOnly()
+        {
+            string json = "{\"property1\":\"string\"}";
+            PropertiesDefinition properties = json.Deserialize<PropertiesDefinition>();
+        }
+
+        [TestMethod]
+        public void DeserializeProperties_One_Complete()
+        {
+            string json = "{\"property1\":{\"type\":\"string\", \"id\":true, \"description\":\"This is Property 1\"}}";
+            PropertiesDefinition properties = json.Deserialize<PropertiesDefinition>();
         }
     }
 }
