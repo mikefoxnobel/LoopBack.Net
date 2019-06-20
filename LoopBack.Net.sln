@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopBack.Client", "LoopBack.Client\LoopBack.Client.csproj", "{EE790A36-BDF1-4396-92AD-E007FE443ECA}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopBack.Models", "LoopBack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopBack.ModelGenerator.Test", "LoopBack.ModelGenerator.Test\LoopBack.ModelGenerator.Test.csproj", "{65EDE665-93BB-4174-B99D-8F15FD81D231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopBack.QueryBuilder", "LoopBack.QueryBuilder\LoopBack.QueryBuilder.csproj", "{4037F63B-5E4C-4C75-8596-6DE9EE87DA24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopBack.QueryBuilder", "LoopBack.QueryBuilder\LoopBack.QueryBuilder.csproj", "{4037F63B-5E4C-4C75-8596-6DE9EE87DA24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopBack.QueryBuilder.Test", "LoopBack.QueryBuilder.Test\LoopBack.QueryBuilder.Test.csproj", "{5934EBBA-590E-4D9F-9687-202C47591A6A}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{250170E2-0B79-42AB-8443-BCB784040E13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopBack.Models.Test", "LoopBack.Models.Test\LoopBack.Models.Test.csproj", "{D1696CDB-BF5C-4862-8178-14CC7655F5ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{4ABB2FBA-130F-4273-9AA9-7EF574E8C6AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LoopBack", "LoopBack", "{2ACCB4B9-47A3-43EF-9D9A-7C2C864469EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
